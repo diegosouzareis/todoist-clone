@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #282828;
+    color: white;
+}
+
+button {
+    all: unset;
+}
+
+main {
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
+}
+
+.todoist-header {
+    display: flex;
+    height: 44px;
+    background-color: #282828;
+    align-items: center;
+    z-index: 200;
+    justify-content: center;
+    padding-left: 42px;
+    padding-right: 42px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+}
+
+.todoist-header-controls {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todoist-header-controls-left-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.todoist-sidebar {
+    box-sizing: border-box;
+    width: 410px;
+    height: calc(100vh - 44px);
+    padding-top: 30px;
+    padding-left: 35px;
+    position: fixed;
+    left: 0;
+}
+
+.todoist-main {
+    display: flex;
+    margin-left: 410px;
+    height: calc(100vh - 44px);
+    flex-direction: column;
+}
+
+.todoist-header-controls-left-options-buttons {
+    display: flex;
+    justify-content: center;
+    margin-right: 4px;
+    cursor: pointer;
+    align-items: center;
+    min-width: 28px;
+    min-height: 28px;
+}
+
+.todoist-header-controls-left-options-buttons:hover {
+    background-color: hsla(0,0%,100%,.2);
+    border-radius: 3px;
+}
+
+.todoist-header-controls-left-options-input {
+    margin-left: 2px;
+    position: relative;
+}
+
+.todoist-header-controls-left-options-input-find {
+    padding: 5px 0 5px 34px;
+    border-radius: 3px;
+    background: #363636;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 13px;
+    width: 198px!important;
+}
+
+.todoist-header-controls-left-options-input-find:focus-visible {
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    color: #797979;
+    cursor: text;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 21px;
+}

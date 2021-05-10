@@ -35,7 +35,7 @@ main {
     justify-content: space-between;
 }
 
-.todoist-header-controls-left-options {
+.todoist-header-controls-options {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -58,7 +58,7 @@ main {
     flex-direction: column;
 }
 
-.todoist-header-controls-left-options-buttons {
+.todoist-header-controls-options-buttons {
     display: flex;
     justify-content: center;
     margin-right: 4px;
@@ -68,7 +68,7 @@ main {
     min-height: 28px;
 }
 
-.todoist-header-controls-left-options-buttons:hover {
+.todoist-header-controls-options-buttons:hover {
     background-color: hsla(0,0%,100%,.2);
     border-radius: 3px;
 }
@@ -100,4 +100,21 @@ main {
     top: 50%;
     transform: translateY(-50%);
     height: 21px;
+}
+
+.profile-picture-header {
+    box-sizing: content-box;
+    border-radius: 100%;
+    height: 28px;
+    width: 28px;
+    
+}
+
+.buttons-banner-margin {
+    margin-left: 5px;
+}
+
+.notifications-header {
+    margin-right: 24px;
+    margin-left: 5px;
 }

@@ -19,6 +19,7 @@ main {
 
 ul {
     list-style-type: none;
+
 }
 
 .todoist-header {
@@ -41,6 +42,7 @@ ul {
 }
 
 .todoist-header-controls-options {
+    margin-left: -2px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -120,7 +122,7 @@ ul {
 }
 
 .notifications-header {
-    margin-right: 24px;
+    margin-right: 16px;
     margin-left: 5px;
 }
 
@@ -185,4 +187,122 @@ ul {
     display: flex;
     justify-content: center;
     margin-right: 5px;
+}
+
+.header-task {
+    padding:36px 55px 0px;
+}
+
+.header-task-header {
+    padding-bottom: 8px;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.todoist-tasks {
+    padding-left: 55px;
+    padding-right: 55px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.add-tasks-controller {
+    padding: 0 20px 0 0px;
+}
+
+.add-tasks-controller-button {
+    font-size: 14px;
+    color: grey;
+    display: flex;
+}
+
+.add-icon {
+    margin-right: 11px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    color: #de4c4a;
+}
+
+.add-tasks-controller-button:hover {
+    color: #de4c4a;
+    cursor: pointer;
+}
+
+.add-tasks-controller-button:hover > .add-icon {
+    color: #fff;
+    background: #de4c4a;
+    cursor: pointer;
+    transform: scale(.846);
+    border-radius: 50%;
+}
+
+.add-tasks-controller-button > span:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+
+.todoist-content {
+    margin-top: 8px;
+}
+
+.add-task-block {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: #171717;
+    border: 1px solid #2b2b2b;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+}
+
+.add-task-input {
+    width: 100%;
+    background: #171717;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 0;
+    color:#fff;
+    padding: 0;
+    outline: none;
+}
+
+.add-task-button {
+    font-weight: 700;
+    font-size: 13px;
+    background: #de4c4a;
+    padding: 6px 12px 6px;
+    border: 1px solid #de4c4a;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-task-button:disabled {
+    opacity: .3;
+}
+
+.cancel-task-button {
+    font-size: 13px;
+    padding: 2px 5px;
+    cursor: pointer;
+    color: #797979;
+    font-weight: 500;
+}
+
+.cancel-task-button:hover {
+    text-decoration: underline;
+    color: #ffffffde;
+}
+
+.margin-options {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.tasks-form {
+    display: none;
 }

@@ -50,7 +50,7 @@
                     <input type="text" class="todoist-header-controls-left-options-input-find" placeholder="Find">
                 </div>
             </div>
-            <div class="todoist-header-controls-options">
+            <div class="todoist-header-controls-options margin-options">
 
                 <button class="todoist-header-controls-options-buttons buttons-banner-margin">
                     <svg width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd" transform="translate(4 3)"><mask id="jd4FBg" fill="#fff"><path d="M9 8h7a.5.5 0 1 1 0 1H9v7a.5.5 0 1 1-1 0V9H1a.5.5 0 0 1 0-1h7V1a.5.5 0 0 1 1 0v7z"></path></mask><g mask="url(#jd4FBg)"><path fill="currentColor" d="M-4-3h24v24H-4z"></path></g></g></svg>
@@ -97,7 +97,46 @@
                 </ul>
             </div>
         </div>
-        <main class="todoist-main"></main>
+
+        <main class="todoist-main">
+
+                <header class="header-task">
+                    <div class="header-task-header">
+                        <h1 style="font-size: 20px;color:#ffffffde;">Inbox</h1>
+                    </div>
+                </header>
+
+                <div class="todoist-content">
+                    <div class="todoist-tasks">
+                        <ul style="padding: 0;">
+
+                            <li class="add-tasks-controller">
+                                <button class="add-tasks-controller-button">
+                                    <span class="add-icon">
+                                        <svg width="13" height="13"><path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                                    </span>
+                                    <span>Add task</span> 
+                                </button>
+
+                                <form class="tasks-form" action="#">
+                                    <div class="add-task-block">
+                                        <input type="text" class="add-task-input" placeholder="Task name" name="" id="">
+                                    </div>
+
+                                    <div style="padding-top: 10px;">
+                                        <button class="add-task-button">Add task</button>
+                                        <button class="cancel-task-button">Cancel</button>
+                                    </div>
+                                </form>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+        </main>
+
     </div>
     <script src="js/index.js"></script>
 </body>

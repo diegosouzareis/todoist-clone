@@ -2,10 +2,11 @@ const buttonAdd = document.querySelector('.add-tasks-controller-button');
 const formTask = document.querySelector('.tasks-form');
 const noTasks = document.querySelector('.no-task');
 
-const inputTask = document.querySelector('.add-task-input'); //Input da Tarefa
-const addTask = document.querySelector('.add-task-button'); //Adicionar Tarefa
-const cancelTask = document.querySelector('.cancel-task-button'); //Cancelar Tarefa
-const listTask = document.querySelector('.tasks'); //Lista de Tarefas
+const inputTask = document.querySelector('.add-task-input');
+const addTask = document.querySelector('.add-task-button');
+const cancelTask = document.querySelector('.cancel-task-button');
+const listTask = document.querySelector('.tasks');
+const countTasks = document.querySelector('.counter_tasks');
 
 const tasks = [];
 let id = 0;
@@ -47,8 +48,7 @@ function appLoading() {
         animationFadeIn();
     } else {
         animationFadeOut();
-    }
-    
+    }   
 }
 
 function openTaskTab(){
@@ -85,6 +85,9 @@ function createTask(task) {
         task: task
     });
 
+    countTasks.innerHTML = document.querySelectorAll(".tasks li").length;
+
+    saveTask();
     closeTaskTab();
     appLoading();
 }
@@ -92,16 +95,39 @@ function createTask(task) {
 function deleteTask(taskId) {
     for(let task of tasks) {
         if(task.id === taskId) {
-            //Tirando do DOM
+
             const elementTask = document.getElementById(taskId);
             elementTask.remove();
-            //Tirar do array
+
             const indexTask = tasks.findIndex(x => x.id === taskId);
             tasks.splice(indexTask, 1);
         }
     }
     appLoading();
+    saveTask();
+
+    if(document.querySelectorAll(".tasks li").length == 0 ) {
+        countTasks.innerHTML = '';
+    } else {
+        countTasks.innerHTML = document.querySelectorAll(".tasks li").length;
+    }
+    
     return true
+}
+
+function saveTask() {
+    const tasksJson = JSON.stringify(tasks);
+    localStorage.setItem('tasks', tasksJson);
+}
+
+function addTasks() {
+    const tasksStorage = localStorage.getItem('tasks');
+    const parseTasks = JSON.parse(tasksStorage);
+    console.log(parseTasks);
+
+    for(let task of parseTasks) {
+        createTask(task.task);
+    }
 }
 
 document.addEventListener('click', function(e) {
@@ -140,3 +166,4 @@ addTask.addEventListener('click', function() {
 });
 
 appLoading();
+addTasks();

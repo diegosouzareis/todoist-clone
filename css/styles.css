@@ -374,3 +374,11 @@ ul {
     background-color: hsla(0,0%,100%,.2);
     border-radius: 3px;
 }
+
+.counter_tasks {
+    color: #737373;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

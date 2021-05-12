@@ -152,6 +152,20 @@ ul {
     }
 }
 
+.fade-in {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .navigation-ul {
     padding: 0;
     margin: 0;
@@ -211,6 +225,7 @@ ul {
 
 .add-tasks-controller {
     padding: 0 20px 0 0px;
+    padding: 8px 0;
 }
 
 .add-tasks-controller-button {
@@ -246,7 +261,7 @@ ul {
 }
 
 .todoist-content {
-    margin-top: 8px;
+    margin-top: 0px;
 }
 
 .add-task-block {
@@ -305,4 +320,57 @@ ul {
 
 .tasks-form {
     display: none;
+}
+
+.no-task {
+    position: relative;
+    max-width: 360px;
+    margin: auto;
+    text-align: center;
+}
+
+.no-task-img {
+    margin: auto;
+    width: 220px;
+    height: 200px;
+}
+
+.no-task-text {
+    display: grid;
+    font-size: 13px;
+    color: #ffffff99;
+}
+
+.no-task-text > span:nth-child(1) {
+    color: #ffffffde;
+    margin: 8px;
+    font-size: 16px;
+}
+
+.li-task {
+    font-size: 14px;
+    border-bottom: 1px solid #ffffff1a;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.div-control-delete {
+    float: right;
+    display: none;
+}
+
+.li-task:hover > .div-control-delete{
+    display: flex;
+}
+
+.button-control-delete {
+    color: #ffffff8f;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.button-control-delete:hover {
+    background-color: hsla(0,0%,100%,.2);
+    border-radius: 3px;
 }
